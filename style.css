@@ -11,7 +11,6 @@ body {
     color: #f8e6a0;
 }
 
-/* Header */
 .header {
     background: url('HeaderIMG.png') no-repeat center center;
     background-size: cover;
@@ -49,7 +48,6 @@ body {
     margin-bottom: 20px;
     transition: background 0.5s ease-in-out;}
 
-/* Dark Mode Toggle */
 #dark-mode-toggle {
     position: absolute;
     top: 10px;
@@ -97,8 +95,8 @@ body {
 }
 
 .task-input-box {
-    width: 80%; /* Make it wider */
-    max-width: 600px; /* Prevent it from being too large */
+    width: 80%; 
+    max-width: 600px;
     background-color: rgba(255, 255, 255, 0);
     padding: 20px;
     border-radius: 10px;
@@ -106,9 +104,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto; /* Center it below the header */
-    position: relative; /* Ensure it's not affected by header gradient */
-    z-index: 10; /* Keep it above the gradient */
+    margin: 20px auto; 
+    position: relative; 
+    z-index: 10; 
 }
 
 form {
@@ -205,16 +203,15 @@ button:hover {
 
 .task-actions {
     display: flex;
-    gap: 5px; /* Adds spacing between buttons */
-}
+    gap: 5px; 
 
 
 .task-actions a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px; /* Adjust width if needed */
-    height: 30px; /* Adjust height if needed */
+    width: 30px; 
+    height: 30px; 
     text-decoration: none;
     padding: 5px;
     border-radius: 5px;

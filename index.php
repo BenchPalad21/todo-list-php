@@ -1,7 +1,6 @@
 <?php
 include 'db.php';
 
-// Fetch tasks from the database
 $pendingTasks = $conn->query("SELECT * FROM tasks WHERE status='pending'");
 $completedTasks = $conn->query("SELECT * FROM tasks WHERE status='completed'");
 $deletedTasks = $conn->query("SELECT * FROM tasks WHERE status='deleted'");
@@ -56,7 +55,6 @@ $deletedTasks = $conn->query("SELECT * FROM tasks WHERE status='deleted'");
         const toggleButton = document.getElementById("dark-mode-toggle");
         const body = document.body;
 
-        // Check for saved preference
         if (localStorage.getItem("theme") === "dark") {
             body.classList.add("dark-mode");
             toggleButton.textContent = "☀️";

@@ -1,0 +1,231 @@
+body {
+    background: linear-gradient(to bottom, #fcb000, #ffffff);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.dark-mode {
+    background: linear-gradient(to bottom, #1E1A47 , #3A2E79);
+    color: #f8e6a0;
+}
+
+/* Header */
+.header {
+    background: url('HeaderIMG.png') no-repeat center center;
+    background-size: cover;
+    color: darkblue;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    position: relative;
+    position: relative;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background 0.5s ease-in-out;
+
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+}
+
+.dark-mode .header {
+    background: url('HeaderIMG-Night.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background 0.5s ease-in-out;}
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.dark-mode #dark-mode-toggle {
+    background: rgba(50, 50, 50, 0.8);
+    color: white;
+}
+
+.dark-mode .header {
+    color: #FFD700;
+}
+
+.dark-mode button {
+    background: linear-gradient(to right, #8A4FFF, #5228a5);
+}
+
+.dark-mode button:hover {
+    background: linear-gradient(to right, rgb(41, 22, 96), rgb(5, 37, 166));
+}
+
+.dark-mode .container {
+    background-color: #5A2C6D;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    padding-top: 20px;
+    box-shadow: #000000;
+}
+
+.task-input-box {
+    width: 80%; /* Make it wider */
+    max-width: 600px; /* Prevent it from being too large */
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Center it below the header */
+    position: relative; /* Ensure it's not affected by header gradient */
+    z-index: 10; /* Keep it above the gradient */
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    display: flex;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ffcc00, #ff6600);    
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff9900, #ff3300);
+    transform: scale(1.05);
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.section {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.task-box {
+    color: black !important;
+    background-color: white !important;
+    text-align: left;
+    font-weight: normal;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 5px 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-box:hover {
+    transform: scale(1.01);
+}
+
+.task-box * {
+    color: black !important;
+}
+
+
+.pending {
+    background-color: #EBA963;
+    color: white;
+    padding: 10px;
+    width: 95%;
+    border-radius: 8px;
+}
+
+.completed {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    width: 95%;
+    border-radius: 8px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 5px; /* Adds spacing between buttons */
+}
+
+
+.task-actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Adjust width if needed */
+    height: 30px; /* Adjust height if needed */
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white !important;
+}
+
+
+.complete-btn {
+    background-color: #3498db;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
